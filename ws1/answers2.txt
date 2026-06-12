@@ -1,0 +1,5 @@
+grep '"state":"CA"' business.json \  --> gets all businesses whose state attribute is CA
+grep -oE '"review_count":[0-9]+' \   --> gets the review_count attribute of each entry from above
+grep -oE '[0-9]+' \                  --> gets the actual numbers (removes the surrounding text)
+sort -nr                             --> sorts the numbers (-n for numerical sort) and lists them from highest to lowest (-r)
+head -3                              --> displays the top 3 lines of the input
