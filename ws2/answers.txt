@@ -1,0 +1,16 @@
+Q1: git add notes.md; git commit -m "ws2: add task line"
+Q2: git log -3
+Q3: cf50ea4
+Q4: git revert cf50ea4
+Q5: git rm --cached bigdata.bin; echo "bigdata.bin" >> .gitignore; git commit --amend --allow-empty; git push
+Q6: git checkout -b feature-summary
+Q7: touch summary.md; vim summary.md; git add summary.md; git commit -m "Added summary.md on feature-summary branch"
+Q8: git diff main
+Q9: git checkout main; git merge feature-summary
+Q10: git branch -d feature-summary
+Q11: git merge conflict-branch --> CONFLICT (content): Merge conflict in ws2/summary.md
+Q12: git ls-files --unmerged
+Q13: (edited summary.md using vim)
+Q14: git add summary.md; git commit
+Q15: git fetch origin; git log HEAD..origin/main --oneline
+Q16: When run, git pull can overwrite files and cause merge conflicts. git fetch is much safer to use when trying to sync with the remote server because it allows you to see incoming changes before merging them.
