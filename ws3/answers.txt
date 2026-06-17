@@ -1,0 +1,13 @@
+A1: ls -l > listing.txt; date >> listing.txt
+A2: ls /nonexistent_dir 2> errors.txt
+A3: ls /nonexistent_dir /etc 1> output.txt 2> errors.txt
+A4: ls /nonexistent_dir /etc &> combined.txt
+A5: The terminal shows the output of ls /etc, but hides the errors from ls /nonexistent_dir. This is because the errors are sent to /dev/null. /dev/null silences the errors because it discards all data written to it, and it is unreadable.
+A6: sort fruits.txt | uniq
+A7: sort fruits.txt | uniq -c | sort -nr
+A8: grep -c '^ERROR' server.log
+A9: grep '^ERROR' server.log > errors_only.txt
+A10: grep -oE '^[A-Z]+' server.log | sort | uniq -c | sort -nr
+A11: grep -oE '"state":"[^"]+"' /data/yelp/yelp_academic_dataset_business.json | sort | uniq -c | sort -nr | head -5
+B1: uid=1054(ishigaki-cs21) gid=1054(ishigaki-cs21) groups=1054(ishigaki-cs21),44(video),988(docker),993(render) --> UID is the id for the current user, GID is the primary group id for the current user
+B6: find . -type f -user $(whoami) -perm -u=w
