@@ -1,0 +1,16 @@
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L329 
+up ()
+creates two variables-- d: the path to move to (built via a loop), limit: the number of up-moves we need to take
+limit is given as an argument to the up command
+loops [limit] times, each time appending /.. to the path
+after finishing the loop, it removes the leading slash using a pipeline with echo and sed
+(echo: gives sed the currently built path,
+sed: check start of line (^\/ <-- start of line + escaped slash) then substitute it with nothing)
+after loop + filter, check if $d is empty with '-z' (checks if string length is zero) --> if empty, the loop never ran (either because no argument was given or the argument was invalid) --> substitute default behavior (which in this case is set d to ..)
+finally, cd to the path 
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L322 
+mkdirg ()
+creates a directory with the name specified by argument 1
+mkdir is ran with -p, so it will create parent directories as needed
+finally, cd to the newly made directory
