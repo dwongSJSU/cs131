@@ -1,3 +1,5 @@
+T1:
+
 https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L329 
 up ()
 creates two variables-- d: the path to move to (built via a loop), limit: the number of up-moves we need to take
@@ -14,3 +16,28 @@ mkdirg ()
 creates a directory with the name specified by argument 1
 mkdir is ran with -p, so it will create parent directories as needed
 finally, cd to the newly made directory
+
+
+T2:
+
+shell function:
+https://github.com/dwongSJSU/cs131/blob/348a42d0cb709d2cb33cb18e3a5ae475207d20ed/ws4/.bashrc#L6
+heads ()
+creates two variables-- lines: number of lines to be printed, dir: directory to be searched
+first checks if the command was given two nonempty args (using -z) for lines and directory
+then checks if the directory given is actually a directory (using -d)
+after it will loop through the directory, check if an item is a file, and if it is a file, print out the file's path alongside the first [lines] number of lines
+
+
+alias:
+https://github.com/dwongSJSU/cs131/blob/348a42d0cb709d2cb33cb18e3a5ae475207d20ed/ws4/.bashrc#L3
+This is an alias to run git commit with the message flag. It will create a commit in the local repository with the message provided.
+
+
+if-statement:
+https://github.com/dwongSJSU/cs131/blob/348a42d0cb709d2cb33cb18e3a5ae475207d20ed/ws4/.bashrc#L11
+checks if the args are empty --> if they are, it will cause the function to print the proper usage to the terminal and return failure
+
+https://github.com/dwongSJSU/cs131/blob/348a42d0cb709d2cb33cb18e3a5ae475207d20ed/ws4/.bashrc#L17
+checks if the second arg (stored in $dir) is a directory --> if it is not a directory, it causes the function to print an error message and return failure
+
