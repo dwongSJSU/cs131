@@ -1,0 +1,53 @@
+A coefficient here means that, holding other variables constant, a one unit increase in the feature that the coefficient is tied to will lead to a <coefficient> increase in the output. For example, a $1 increase in the total bill will lead to ~$0.09 increase in the tip, and every additional guest will lead to ~$0.21 increase in the tip.
+
+Batch [23f45b58a81d4442b2c3301455fe03cc] submitted.
+WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
+Using the default container image
+Waiting for container log creation
+PYSPARK_PYTHON=/opt/dataproc/conda/bin/python
+Generating /home/spark/.pip/pip.conf
+Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cache/virtual-python/simple/'
+JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+SPARK_EXTRA_CLASSPATH=
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+26/07/22 08:30:12 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/22 08:30:12 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/22 08:30:12 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
++----------+----+------+------+---+------+----+
+|total_bill| tip|   sex|smoker|day|  time|size|
++----------+----+------+------+---+------+----+
+|     16.99|1.01|Female|    No|Sun|Dinner|   2|
+|     10.34|1.66|  Male|    No|Sun|Dinner|   3|
+|     21.01| 3.5|  Male|    No|Sun|Dinner|   3|
+|     23.68|3.31|  Male|    No|Sun|Dinner|   2|
+|     24.59|3.61|Female|    No|Sun|Dinner|   4|
++----------+----+------+------+---+------+----+
+only showing top 5 rows
+
+26/07/22 08:30:29 WARN Instrumentation: [22052fc6] regParam is zero, which might cause numerical instability and overfitting.
+26/07/22 08:30:30 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+
+A8/Printing Results
+Coefficients: [0.09145843635504758,0.21070300388935664]
+Intercept: 0.6178364054767158
+RMSE: 0.9917585899142384
+R^2: 0.47574015044898343
+
+Batch [23f45b58a81d4442b2c3301455fe03cc] finished.
+metadata:
+  '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
+  batch: projects/cs131-ws5/locations/us-central1/batches/23f45b58a81d4442b2c3301455fe03cc
+  batchUuid: 734974da-a107-4440-a7c1-a09fb0d4e1c2
+  createTime: '2026-07-22T08:28:58.579784Z'
+  description: Batch
+  labels:
+    goog-dataproc-batch-id: 23f45b58a81d4442b2c3301455fe03cc
+    goog-dataproc-batch-uuid: 734974da-a107-4440-a7c1-a09fb0d4e1c2
+    goog-dataproc-drz-resource-uuid: batch-734974da-a107-4440-a7c1-a09fb0d4e1c2
+    goog-dataproc-location: us-central1
+  operationType: BATCH
+  warnings:
+  - No runtime version specified. Using the default runtime version. It is recommended
+    to select a specific major.minor runtime version in production, as the default
+    runtime version may change at any time.
+name: projects/cs131-ws5/regions/us-central1/operations/49e9010e-3d4b-3b66-b9b4-acb66d9d2e2d
